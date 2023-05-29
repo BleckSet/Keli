@@ -808,6 +808,23 @@ body {
           animation: fadeIn 1s ease 1;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .about_PLC {
   border: 3px solid rgba(255, 16, 80, 0.5);
   border-radius: 20px;
@@ -818,6 +835,7 @@ body {
   max-width: 270px;
 }
 .about_PLC .about_PLC_inner {
+  gap: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1305,11 +1323,6 @@ button.btn_sfera:hover {
   left: 30px;
 }
 
-line {
-  stroke: #000;
-  stroke-width: 1px;
-}
-
 .BETON_POPUP_inner_item.bunker {
   top: 350px;
   left: 840px;
@@ -1616,6 +1629,11 @@ line {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.recal_form .btn_form {
+  position: relative;
+  margin: 60px auto;
+  background: url("../img/icon/left_top.svg") top left/15px 15px no-repeat, url("../img/icon/right_top.svg") top right/15px 15px no-repeat, url("../img/icon/left_bottom.svg") bottom left/15px 15px no-repeat, url("../img/icon/right_bottom.svg") bottom right/15px 15px no-repeat, #FF0716;
+}
 .recal_form .btn_intro {
   margin-top: 50px;
   -ms-flex-preferred-size: 100%;
@@ -1637,11 +1655,16 @@ line {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  width: 230px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: none;
   height: 65px;
+}
+.recal_form_inner label input {
+  width: 155px;
+  size: unset !important;
 }
 .recal_form_inner label img {
   -webkit-transform: translateY(5px);
@@ -1658,6 +1681,16 @@ line {
   font-size: 16px;
   line-height: 153.5%;
   color: #fff;
+}
+
+.btn_form:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 204px;
+  height: 64px;
+  z-index: 3;
 }
 
 .input {
@@ -1795,34 +1828,275 @@ line {
   z-index: 3;
 }
 
-@media (min-width: 1639px) {
+@media (min-width: 1450px) {
+  .about_PLC {
+    border: 3px solid rgba(255, 16, 80, 0.5);
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    left: 89px;
+    bottom: 10vh;
+    max-width: 270px;
+  }
+  .BETON_POPUP_inner_item.water {
+    width: 180px;
+    height: 120px;
+    top: 40vh;
+    left: 113.6px;
+  }
+  .BETON_POPUP_inner_item.water h3 {
+    margin-top: -10px;
+  }
+  .BETON_POPUP_inner_item.water:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 80px;
+    left: 90px;
+    background: url("../img/dest/sfera/svg_Beton_line/Water-Smesitelsvg.svg") center/cover no-repeat;
+  }
+  .BETON_POPUP_inner_item.smesitel {
+    height: 220px;
+    width: 180px;
+    top: 44vh;
+    left: 339.2px;
+  }
+  .BETON_POPUP_inner_item.smesitel h3 {
+    margin-top: 15px;
+  }
+  .BETON_POPUP_inner_item.smesitel:before {
+    position: absolute;
+    content: "";
+    left: 108px;
+    top: -104px;
+    width: 200%;
+    height: 200%;
+    background: url("../img/dest/sfera/svg_Beton_line/smesitel-bunker.svg") center/contain no-repeat;
+  }
+  .BETON_POPUP_inner_item.beton {
+    height: 150px;
+    width: 180px;
+    top: 18vh;
+    left: 497px;
+  }
+  .BETON_POPUP_inner_item.beton h3 {
+    margin-top: -22px;
+  }
+  .BETON_POPUP_inner_item.beton:before {
+    position: absolute;
+    content: "";
+    left: 62px;
+    top: 80px;
+    width: 130%;
+    height: 130%;
+    background: url("../img/dest/sfera/svg_Beton_line/bunker-beton.svg") center/contain no-repeat;
+  }
+  .BETON_POPUP_inner_item.bunker {
+    width: 180px;
+    height: 180px;
+    top: 33vh;
+    left: 665.6px;
+  }
+  .BETON_POPUP_inner_item.bunker h3 {
+    margin-top: 10px;
+  }
+  .BETON_POPUP_inner_item.sheben:before {
+    position: absolute;
+    content: "";
+    left: -4px;
+    top: 125px;
+    width: 135%;
+    height: 135%;
+    background: url("../img/dest/sfera/svg_Beton_line/bunker-sheben.svg") center/contain no-repeat;
+  }
+  .BETON_POPUP_inner_item.sheben {
+    width: 200px;
+    height: 140px;
+    top: 12vh;
+    left: 666.8px;
+  }
+  .BETON_POPUP_inner_item.sheben h3 {
+    margin-top: -25px;
+  }
+  .BETON_POPUP_inner_item.betonomeshalka {
+    height: 128px;
+    width: 132px;
+    top: 70vh;
+    left: 709px;
+  }
+  .BETON_POPUP_inner_item.betonomeshalka h3 {
+    margin-top: 30px;
+  }
+  .BETON_POPUP_inner_item.betonomeshalka:before {
+    position: absolute;
+    content: "";
+    left: -294px;
+    top: -89px;
+    width: 240%;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    height: 200%;
+    background: url("../img/dest/sfera/svg_Beton_line/smesitel-betonomeshalka.svg") center/contain no-repeat;
+  }
+  .BETON_POPUP_inner_item.prisadka {
+    width: 162px;
+    height: 140px;
+    top: 22vh;
+    left: 852.8px;
+  }
+  .BETON_POPUP_inner_item.prisadka h3 {
+    margin-top: -20px;
+  }
   .Metal_POPUP_item:nth-child(3) {
-    left: 2vw;
-    top: 30vh;
+    left: 60.2px;
+  }
+  .Metal_POPUP_item:nth-child(3) span {
+    bottom: 70px;
   }
   .Metal_POPUP_item:nth-child(4) {
-    left: 4vw;
-    top: 10vh;
+    left: 101.6px;
+  }
+  .Metal_POPUP_item:nth-child(4) span {
+    bottom: 81px;
+    left: 105px;
   }
   .Metal_POPUP_item:nth-child(5) {
-    left: 12vw;
-    top: 21vh;
+    left: 232.4px;
+  }
+  .Metal_POPUP_item:nth-child(5) span {
+    bottom: 77px;
+    left: 110px;
   }
   .Metal_POPUP_item:nth-child(6) {
-    left: 20vw;
-    top: 12vh;
+    left: 361.8px;
+  }
+  .Metal_POPUP_item:nth-child(6) span {
+    bottom: 77px;
+    left: 85px;
   }
   .Metal_POPUP_item:nth-child(7) {
-    left: 32vw;
-    top: 21vh;
+    width: 200px;
+    height: 200px;
+    left: 550.4px;
+  }
+  .Metal_POPUP_item:nth-child(7) span {
+    bottom: 5px;
+    left: 25px;
   }
   .Metal_POPUP_item:nth-child(8) {
-    left: 37vw;
-    top: 12vh;
+    left: 630px;
+  }
+  .Metal_POPUP_item:nth-child(8) span {
+    bottom: 49px;
+    left: 88px;
   }
   .Metal_POPUP_item:nth-child(9) {
-    left: 49vw;
-    top: 21vh;
+    left: 801px;
+  }
+  .Metal_POPUP_item:nth-child(9) span {
+    bottom: 77px;
+    left: 65px;
+  }
+  .Metal_POPUP_item:nth-child(10) {
+    left: 905.2px;
+  }
+  .Metal_POPUP_item:nth-child(10) span {
+    bottom: 70px;
+    left: 85px;
+  }
+  .Metal_POPUP_item:nth-child(11) {
+    left: 796.6px;
+  }
+  .Metal_POPUP_item:nth-child(11) span {
+    bottom: 54px;
+    left: 95px;
+  }
+  .Metal_POPUP_item:nth-child(12) {
+    left: 644.6px;
+  }
+  .Metal_POPUP_item:nth-child(12) span {
+    bottom: 40px;
+    left: 85px;
+  }
+  .Metal_POPUP_item:nth-child(13) {
+    left: 488.4px;
+  }
+  .Metal_POPUP_item:nth-child(13) span {
+    bottom: 13px;
+    left: 87px;
+  }
+  .Metal_POPUP_item:nth-child(14) {
+    width: 127px;
+    height: 200px;
+    left: 399px;
+  }
+  .Metal_POPUP_item:nth-child(14) span {
+    bottom: -5px;
+    left: 15px;
+  }
+  .Pishevaya_POPUP_item:nth-child(3) {
+    left: 28.4px;
+  }
+  .Pishevaya_POPUP_item:nth-child(3) span {
+    bottom: 30px;
+    left: 70px;
+  }
+  .Pishevaya_POPUP_item:nth-child(4) {
+    left: 175.8px;
+    z-index: 1;
+    width: 350px;
+  }
+  .Pishevaya_POPUP_item:nth-child(4) span {
+    bottom: 3px;
+    left: 120px;
+  }
+  .Pishevaya_POPUP_item:nth-child(5) {
+    left: 366px;
+  }
+  .Pishevaya_POPUP_item:nth-child(5) span {
+    bottom: 117px;
+    left: 127px;
+  }
+  .Pishevaya_POPUP_item:nth-child(6) {
+    width: 320px;
+    left: 349px;
+  }
+  .Pishevaya_POPUP_item:nth-child(6) span {
+    bottom: 87px;
+    left: 142px;
+  }
+  .Pishevaya_POPUP_item:nth-child(7) {
+    width: 358px;
+    height: 237px;
+    left: 318px;
+  }
+  .Pishevaya_POPUP_item:nth-child(7) span {
+    bottom: 55px;
+    left: 175px;
+  }
+  .Pishevaya_POPUP_item:nth-child(8) {
+    left: 530px;
+    width: 300px;
+  }
+  .Pishevaya_POPUP_item:nth-child(8) span {
+    bottom: 45px;
+    left: 120px;
+  }
+  .Pishevaya_POPUP_item:nth-child(9) {
+    left: 712px;
+  }
+  .Pishevaya_POPUP_item:nth-child(9) span {
+    bottom: 25px;
+    left: 115px;
+  }
+  .Pishevaya_POPUP_item:nth-child(10) {
+    width: 380px;
+    left: 857px;
+  }
+  .Pishevaya_POPUP_item:nth-child(10) span {
+    bottom: 66px;
+    left: 165px;
   }
 }
 @media (max-width: 1216px) {
