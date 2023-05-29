@@ -1655,7 +1655,6 @@ button.btn_sfera:hover {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: 230px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
