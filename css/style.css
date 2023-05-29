@@ -36,7 +36,10 @@
   src: url("../fonts/gilroy-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy-medium.woff2") format("woff2"), url("../fonts/gilroy-medium.woff") format("woff"), url("../fonts/gilroy-medium.ttf") format("truetype"), url("../fonts/gilroy-medium.svg#gilroy-medium") format("svg"); /* Chrome < 4, Legacy iOS */
   font-weight: 500;
 }
-input:-webkit-autofill,
+
+
+
+:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
@@ -1632,8 +1635,7 @@ button.btn_sfera:hover {
 .recal_form .btn_form {
   position: relative;
   margin: 60px auto;
-  background: url("../img/icon/left_top.svg") top left/15px 15px no-repeat, url("../img/icon/right_top.svg") top right/15px 15px no-repeat, url("../img/icon/left_bottom.svg") bottom left/15px 15px no-repeat, url("../img/icon/right_bottom.svg") bottom right/15px 15px no-repeat, #FF0716;
-}
+  }
 .recal_form .btn_intro {
   margin-top: 50px;
   -ms-flex-preferred-size: 100%;
