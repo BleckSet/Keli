@@ -186,3 +186,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+$(document).ready(function() {
+  // Плавная прокрутка до якоря при клике на кнопку
+  $('a').click(function() {
+    var target = $(this.hash);
+    $('html, body').animate({
+      scrollTop: target.offset().top + -50
+    }, 800);
+    return false;
+  });
+});
